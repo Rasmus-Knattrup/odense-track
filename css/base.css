@@ -5,11 +5,20 @@ body {
 
 .wrapper {
     width: 990px;
-    background-color: blue;
     height: 50vh;
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.header {
+
+}
+
+.top-menu {
+    display: block;
+    background-color: #000000;
+    height: 32px;
 }
 
 .footer {
