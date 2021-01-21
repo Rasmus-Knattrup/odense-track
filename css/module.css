@@ -41,3 +41,18 @@
     grid-column: 1 / 1;
     grid-row: 1 / 1;
 }
+
+.aboutus-style {
+    font-family: 'Verdana';
+    text-decoration: none;
+    font-size: 10.16px;
+    color: #999999;
+    padding: 12px;
+}
+
+.line {
+    font-size: 14.16px;
+    font-weight: bold;
+    color: #333333;
+    vertical-align: middle;
+}

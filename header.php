@@ -23,7 +23,28 @@
         </div>
 
         <div class="main-header">
-            <img src="img/headerlogo.png" alt="">
+            <div class="headerlogo-frame">
+                <img class="headerlogo" src="img/headerlogo.png" alt="">
+            </div>
+            <div class="aboutus-nav">
+                <ul class="aboutus-nav-ul">
+                    <li>
+                        <a class="aboutus-style" href="#">Om Odense Track</a>
+                    </li>
+
+                    <span class="line">|</span>
+
+                    <li>
+                        <a class="aboutus-style" href="#">Kontakt os</a>
+                    </li>
+
+                    <li class="search">
+                        <img class="search-icon" src="img/searchicon.png" alt="?">
+                        <span class="search-label">SØG</span>
+                        <input class="search-input" type="text">
+                    </li>
+                </ul>
+            </div>
         </div>
 
         <nav class="main-nav">

@@ -17,20 +17,62 @@ body {
 
 .top-menu {
     display: block;
-    padding-top: 6px;
     padding-right: 6px;
     background-color: #000000;
     height: 32px;
 }
 .top-menu-box {
-    display: block;
-    margin-left: auto;
-    width: fit-content;
+    display: flex;
+    justify-content: flex-end;
+    min-height: 100%;
 }
 
 .main-header {
+    display: flex;
+    flex-flow: row;
     height: 72px;
     border-bottom: #2e2e2e solid 2px;
+}
+.headerlogo-frame {
+    min-height: 100%;
+    width: fit-content;
+    display: flex;
+}
+
+.aboutus-nav {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.aboutus-nav-ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    width: fit-content;
+    margin-bottom: 12px;
+}
+
+.search {
+    padding-left: 28px;
+}
+.search-icon {
+    vertical-align: middle;
+}
+.search-label {
+    font-weight: bold;
+    font-family: 'Verdana';
+    font-size: 10.16px;
+    color: #0f90a6;
+    letter-spacing: 1.6px;
+}
+.search-input {
+    width: 68px;
+}
+
+.main-nav {
+    height: 46px;
 }
 
 .footer {

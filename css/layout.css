@@ -3,11 +3,14 @@
     color: #a1141a;
     font-size: 10.16px;
     font-weight: bold;
+    align-self: center;
 }
 
 .lettericon {
     vertical-align: middle;
     margin-right: 12px;
+    margin-left: 6px;
+    align-self: center;
 }
 
 .ordernow {
@@ -16,7 +19,14 @@
     color: #ffffff;
     font-size: 12.7px;
     background-color: #c8142e;
-    padding: 5px;
+    padding: 4px;
     border-radius: 5px;
     text-decoration: none;
+    align-self: center;
+}
+
+.headerlogo {
+    display: inline-block;
+    padding-left: 26px;
+    align-self: center;
 }
