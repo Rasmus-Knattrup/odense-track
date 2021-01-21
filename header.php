@@ -29,13 +29,13 @@
             <div class="aboutus-nav">
                 <ul class="aboutus-nav-ul">
                     <li>
-                        <a class="aboutus-style" href="#">Om Odense Track</a>
+                        <a class="aboutus-link" href="#">Om Odense Track</a>
                     </li>
 
                     <span class="line">|</span>
 
                     <li>
-                        <a class="aboutus-style" href="#">Kontakt os</a>
+                        <a class="aboutus-link" href="#">Kontakt os</a>
                     </li>
 
                     <li class="search">
@@ -48,7 +48,19 @@
         </div>
 
         <nav class="main-nav">
+            <ul class="main-nav-ul">
+                <li>
+                    <span class="main-nav-link formal-padding">FORMAL 1</span>
+                </li>
 
+                <li>
+                    <span class="main-nav-link">EVENTS</span>
+                </li>
+
+                <li>
+                    <span class="main-nav-link">NYHEDER</span>
+                </li>
+            </ul>
         </nav>
 
     </header>

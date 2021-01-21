@@ -42,7 +42,7 @@
     grid-row: 1 / 1;
 }
 
-.aboutus-style {
+.aboutus-link {
     font-family: 'Verdana';
     text-decoration: none;
     font-size: 10.16px;
@@ -55,4 +55,17 @@
     font-weight: bold;
     color: #333333;
     vertical-align: middle;
+}
+
+.main-nav-link {
+    color: #ffffff;
+    font-size: 12.7px;
+    font-weight: bold;
+    font-family: 'Verdana';
+    padding-right: 38px;
+    padding-left: 38px;
+}
+
+.main-nav-link.formal-padding {
+    padding-left: 64px;
 }
