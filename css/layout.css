@@ -30,3 +30,7 @@
     padding-left: 26px;
     align-self: center;
 }
+
+.hero {
+    max-width: 100%;
+}
