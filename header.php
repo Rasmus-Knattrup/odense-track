@@ -50,15 +50,15 @@
         <nav class="main-nav">
             <ul class="main-nav-ul">
                 <li>
-                    <span class="main-nav-link formal-padding">FORMAL 1</span>
+                    <a href="#" class="main-nav-link formal-padding">FORMAL 1</a>
                 </li>
 
                 <li>
-                    <span class="main-nav-link">EVENTS</span>
+                    <a href="#" class="main-nav-link">EVENTS</a>
                 </li>
 
                 <li>
-                    <span class="main-nav-link">NYHEDER</span>
+                    <a href="#" class="main-nav-link">NYHEDER</a>
                 </li>
             </ul>
         </nav>
