@@ -12,13 +12,25 @@ body {
 }
 
 .header {
-
+    background-color: #1c1c1c;
 }
 
 .top-menu {
     display: block;
+    padding-top: 6px;
+    padding-right: 6px;
     background-color: #000000;
     height: 32px;
+}
+.top-menu-box {
+    display: block;
+    margin-left: auto;
+    width: fit-content;
+}
+
+.main-header {
+    height: 72px;
+    border-bottom: #2e2e2e solid 2px;
 }
 
 .footer {

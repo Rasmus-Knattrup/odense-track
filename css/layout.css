@@ -5,12 +5,18 @@
     font-weight: bold;
 }
 
+.lettericon {
+    vertical-align: middle;
+    margin-right: 12px;
+}
+
 .ordernow {
+    display: inline-block;
     font-family: 'Verdana';
     color: #ffffff;
     font-size: 12.7px;
     background-color: #c8142e;
-    padding: 6px;
+    padding: 5px;
     border-radius: 5px;
     text-decoration: none;
 }

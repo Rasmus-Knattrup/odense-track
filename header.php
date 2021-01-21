@@ -15,15 +15,15 @@
     <header class="header">
 
         <div class="top-menu">
-            <span class="support">SUPPORT:</span> <img src="" alt=""> <a class="ordernow" href="#">BESTIL NU</a>
+            <div class="top-menu-box">
+                <span class="support">SUPPORT:</span>
+                <img class="lettericon" src="img/lettericon.png" alt="">
+                <a class="ordernow" href="#">BESTIL NU</a>
+            </div>
         </div>
 
-        <div class="...">
-            <div class="logo">
-                <span class="logo-odense">ODENSE</span>
-                <span class="logo-r-and-e">Racing & Events</span>
-                <span class="logo-track">TRACK</span>
-            </div>
+        <div class="main-header">
+            <img src="img/headerlogo.png" alt="">
         </div>
 
         <nav class="main-nav">
