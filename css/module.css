@@ -70,3 +70,32 @@
 .main-nav-link.formal-padding {
     padding-left: 64px;
 }
+
+.events-arrow {
+    background-color: #ffa019;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    padding-right: 8.5px;
+    padding-left: 8.5px;
+    margin: 1px;
+}
+.events-arrow-right {
+    border-bottom-right-radius: 14px;
+    border-top-right-radius: 14px;
+    border-left: 1px solid #ffb142;
+    margin-left: 0;
+}
+.events-arrow-left {
+    border-bottom-left-radius: 14px;
+    border-top-left-radius: 14px;
+    border-right: 1px solid #ef9617;
+    margin-right: 0;
+}
+.events-arrow:focus {
+    outline: none;
+}
+.events-arrow:active {
+    background-color: #ac6b11;
+}
