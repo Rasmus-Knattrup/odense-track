@@ -30,7 +30,7 @@ body {
     display: flex;
     flex-flow: row;
     height: 72px;
-    border-bottom: #2e2e2e solid 2px;
+    border-bottom: #2e2e2e solid 1px;
 }
 .headerlogo-frame {
     min-height: 100%;
@@ -87,6 +87,11 @@ body {
     height: 100%;
 }
 
+.events {
+    padding-bottom: 26px;
+    border-bottom: 1px solid #262525;
+}
+
 .events-header {
     display: flex;
     justify-content: space-between;
@@ -115,6 +120,22 @@ body {
     align-self: center;
     height: fit-content;
     padding: 6px;
+}
+
+.events-main {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.events-footer {
+    margin-top: 32px;
+}
+.events-footer-link {
+    color: #ffffff;
+    font-size: 22.86px;
+    font-family: 'Verdana';
+    text-decoration: none;
 }
 
 .footer {
