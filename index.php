@@ -44,10 +44,12 @@
 
     <section class="news">
         <div class="news-header">
-            <h2>BANE AKTIVITET</h2>
-            <button class="events-arrow events-arrow-right"> <i class="arrow up"></i> </button>
-            <button class="events-arrow events-arrow-left"> <i class="arrow down"></i> </button>
-            <h2>EVENT CENTER</h2>
+            <h2 class="news-title">BANE AKTIVITET</h2>
+            <span class="news-view-all"> <i class="arrow right view-all"></i> Se hele Event Kalenderen</span>
+            <button class="events-arrow events-arrow-left"> <i class="arrow up"></i> </button>
+            <button class="events-arrow events-arrow-right"> <i class="arrow down"></i> </button>
+            
+            <h2 class="news-title">EVENT CENTER</h2>
         </div>
     </section>
 </main>

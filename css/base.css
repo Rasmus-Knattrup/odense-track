@@ -138,6 +138,11 @@ body {
     text-decoration: none;
 }
 
+.news-header {
+    display: flex;
+    align-items: center;
+}
+
 .footer {
     background-color: #111111;
     height: 195px;

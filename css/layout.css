@@ -62,3 +62,23 @@
     border-bottom: 1px solid #262525;
     margin-bottom: 28px;
 }
+
+.news-view-all {
+    color: #03969d;
+    font-size: 10.16px;
+    font-family: 'Verdana';
+    margin-left: 6px;
+}
+
+.arrow.right.view-all {
+    border: #03969d solid;
+    border-width: 0 2px 2px 0;
+    margin-right: 8px;
+}
+
+.news-title {
+    font-family: 'Verdana';
+    font-size: 25.4px;
+    color: #ffffff;
+    font-weight: 100;
+}
