@@ -74,6 +74,25 @@
     background-color: #ac6b11;
 }
 
+.news-arrow-up {
+    border-bottom-right-radius: 14px;
+    border-top-right-radius: 14px;
+    border-left: 1px solid #ffb142;
+    margin-left: 0;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 6px;
+}
+.news-arrow-down {
+    border-bottom-left-radius: 14px;
+    border-top-left-radius: 14px;
+    border-right: 1px solid #ef9617;
+    margin-right: 0;
+    padding-left: 10px;
+    padding-top: 6px;
+    padding-bottom: 10px;
+}
+
 .arrow {
     border: solid #ffffff;
     border-width: 0 2px 2px 0;

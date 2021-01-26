@@ -6,9 +6,7 @@
         <div class="events-header">
            <h1 class="events-title">EVENTS</h1>
            <div class="events-nav">
-                <span class="events-counter">
-                    <span class="padding-1 padding-left-8">1 af 2</span>
-                </span>
+                <span class="events-counter">1 af 2</span>
                 <button class="events-arrow events-arrow-left"> <i class="arrow left"></i> </button>
                 <button class="events-arrow events-arrow-right"> <i class="arrow right"></i> </button>
            </div>
@@ -38,18 +36,33 @@
         </div>
 
         <div class="events-footer">
-            <a class="events-footer-link" href="#">>>TIDLIGERE EVENTS</a>
+            <h2 class="events-footer-prior">>>TIDLIGERE EVENTS</h2>
         </div>
     </section>
 
     <section class="news">
-        <div class="news-header">
-            <h2 class="news-title">BANE AKTIVITET</h2>
-            <span class="news-view-all"> <i class="arrow right view-all"></i> Se hele Event Kalenderen</span>
-            <button class="events-arrow events-arrow-left"> <i class="arrow up"></i> </button>
-            <button class="events-arrow events-arrow-right"> <i class="arrow down"></i> </button>
-            
+        <div class="news-latest">
+            <div class="news-latest-header">
+                <h2 class="news-title">BANE AKTIVITET</h2>
+                <span class="news-view-all"> <i class="arrow right view-all"></i> Se hele Event Kalenderen</span>
+                <div class="news-arrow-box">
+                    <button class="events-arrow news-arrow-down"> <i class="arrow down"></i> </button>
+                    <button class="events-arrow news-arrow-up"> <i class="arrow up"></i> </button>
+                </div>
+            </div>
+            <div class="news-latest-article-box">
+                <article class="news-latest-article">
+                    <span>Test</span>
+                    <a href="#">LÆS MERE</a>
+                </article>
+            </div>
+        </div>
+
+        <div class="news-center">
             <h2 class="news-title">EVENT CENTER</h2>
+            <div class="news-center-articles">
+
+            </div>
         </div>
     </section>
 </main>
