@@ -50,17 +50,74 @@
                     <button class="events-arrow news-arrow-up"> <i class="arrow up"></i> </button>
                 </div>
             </div>
-            <div class="news-latest-article-box">
+            <div class="news-latest-article-wrapper">
+                <div class="news-latest-date-wrapper">
+                    <div class="news-latest-date">
+                        <span class="news-latest-day">11</span>
+                        <span class="news-latest-month">MAR</span>
+                    </div>
+                </div>
                 <article class="news-latest-article">
-                    <span>Test</span>
-                    <a href="#">LÆS MERE</a>
+                    <div class="news-latest-article-content">
+                        <h3 class="news-latest-article-title">Need For Speed</h3>
+                        <p class="news-latest-article-text">
+                            Kom ud på banen og slip den indre fartdjævel 
+                            løs. Denne dag er for dig som trænger til at give
+                            den gas, og teste din bil på en bane i sikre...
+                        </p>
+                    </div>
+                    <div class="news-read_more-wrapper">
+                        <a class="news-latest-article-read_more" href="#">LÆS MERE</a>
+                    </div>   
+                </article>
+            </div>
+            <div class="news-latest-article-wrapper">
+                <div class="news-latest-date-wrapper">
+                    <div class="news-latest-date">
+                        <span class="news-latest-day">12</span>
+                        <span class="news-latest-month">MAR</span>
+                    </div>
+                </div>
+                <article class="news-latest-article">
+                    <div class="news-latest-article-content">
+                        <h3 class="news-latest-article-title">Motion For Alle</h3>
+                        <p class="news-latest-article-text">
+                            Hver tirsdag tilbyder Odense Track en unik og 
+                            sikker træningsaften, for cyklister og motionis-
+                            ter. Vi kalder denne aften for “Banen Rundt”...
+                        </p>
+                    </div>
+                    <div class="news-read_more-wrapper">
+                        <a class="news-latest-article-read_more" href="#">LÆS MERE</a>
+                    </div>   
+                </article>
+            </div>
+            <div class="news-latest-article-wrapper">
+                <div class="news-latest-date-wrapper">
+                    <div class="news-latest-date">
+                        <span class="news-latest-day">13</span>
+                        <span class="news-latest-month">MAR</span>
+                    </div>
+                </div>
+                <article class="news-latest-article">
+                    <div class="news-latest-article-content">
+                        <h3 class="news-latest-article-title">DM i Gokart</h3>
+                        <p class="news-latest-article-text">
+                            Danmarksmesterskaber i Gokart, afholdes i år, 
+                            på Odense Track. Deltagerne kommer fra hele 
+                            landet, niveauet er helt i top, når kørerne...
+                        </p>
+                    </div>
+                    <div class="news-read_more-wrapper">
+                        <a class="news-latest-article-read_more" href="#">LÆS MERE</a>
+                    </div>   
                 </article>
             </div>
         </div>
 
         <div class="news-center">
             <h2 class="news-title">EVENT CENTER</h2>
-            <div class="news-center-articles">
+            <div class="news-center-article">
 
             </div>
         </div>
