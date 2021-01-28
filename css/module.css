@@ -1,46 +1,4 @@
-.logo {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto;
-    width: fit-content;
-    height: 100px;
-}
 
-.logo-odense {
-    display: block;
-    font-family: 'Bauhaus 93';
-    font-size: 30.39px;
-    color: #11757a;
-    align-self: end;
-
-    grid-column: 1 / 1;
-    grid-row: 1 / 1;
-}
-
-.logo-track {
-    display: block;
-    height: 38.71px;
-    font-family: 'Bernard MT Condensed';
-    font-size: 38.71px;
-    color: white;
-    align-self: end;
-
-    grid-column: 2 / 2;
-    grid-row: 1 / 1;
-}
-
-.logo-r-and-e {
-    display: block;
-    font-family: 'Verdana';
-    font-size: 9.12px;
-    color: white;
-    font-weight: bold;
-    letter-spacing: 1.6px;
-    align-self: end;
-
-    grid-column: 1 / 1;
-    grid-row: 1 / 1;
-}
 
 .main-nav-link.formal-padding {
     padding-left: 64px;
@@ -219,4 +177,75 @@
 .news-center-arrow {
     border: 8px solid transparent;
     border-left-color: #e51937;
+}
+
+/* FOOTER */
+
+.logo {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    width: fit-content;
+    margin-left: 22px;
+}
+
+.logo-odense {
+    display: block;
+    font-family: 'Bauhaus 93';
+    font-size: 30.39px;
+    color: #11757a;
+    align-self: end;
+
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+}
+
+.logo-track {
+    display: block;
+    height: 38.71px;
+    font-family: 'Bernard MT Condensed';
+    font-size: 38.71px;
+    color: white;
+    align-self: end;
+
+    grid-column: 2 / 2;
+    grid-row: 1 / 1;
+}
+
+.logo-r-and-e {
+    display: block;
+    font-family: 'Verdana';
+    font-size: 9.12px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1.6px;
+    align-self: end;
+
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+}
+
+.footer-nav-item {
+    padding: 8px;
+}
+.footer-nav-link {
+    text-decoration: none;
+    font-size: 10.16px;
+    font-family: 'Verdana';
+    color: #578282;
+}
+.footer-main-title {
+    color: #ffffff;
+    font-size: 12.7px;
+    font-family: 'Verdana';
+    font-weight: 100;
+    margin: 0;
+}
+.footer-main-text {
+    display: block;
+    color: #c4c4c4;
+    font-size: 10.16px;
+    font-family: 'Verdana';
+    margin-top: 12px;
+    margin-bottom: 12px;
 }
