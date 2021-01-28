@@ -10,7 +10,6 @@
                         <span class="logo-track">TRACK</span>
                     </div>
                 </div>
-                
 
                 <div class="social-media">
                     <div class="social-media-content">

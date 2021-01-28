@@ -1,3 +1,4 @@
+/* BODY & WRAPPER */
 body {
     margin: 0;
     background-image: url('../img/background.png');
@@ -9,6 +10,8 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+
+/* HEADER */
 
 .header {
     background-color: #1c1c1c;
@@ -70,6 +73,8 @@ body {
     width: 68px;
 }
 
+/* MAIN-NAV */
+
 .main-nav {
     display: flex;
     align-items: center;
@@ -83,9 +88,13 @@ body {
     padding: 0;
 }
 
+/* MAIN */
+
 .main {
     height: 100%;
 }
+
+/* EVENTS */
 
 .events {
     padding-bottom: 26px;

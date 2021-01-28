@@ -1,3 +1,4 @@
+/* HEADER */
 .support {
     font-family: 'Myriad Pro';
     color: #a1141a;
@@ -56,12 +57,16 @@
     align-self: center;
 }
 
+/* MAIN */
+
 .hero {
     max-width: 100%;
     padding-bottom: 24px;
     border-bottom: 1px solid #262525;
     margin-bottom: 28px;
 }
+
+/* NEWS */
 
 .news-view-all {
     color: #03969d;
