@@ -205,11 +205,18 @@
     padding-left: 10px;
     border-radius: 2px;
 }
+.news-center-img-frame {
+    height: 64px;
+    box-shadow: 1px 1px 8px black;
+    margin-left: 12px;
+}
 .news-center-arrow-wrapper {
+    display: flex;
+    justify-content: center;
     height: fit-content;
     width: 85px;
 }
 .news-center-arrow {
-    background-color: #e51937;
-    padding: 6px;
+    border: 8px solid transparent;
+    border-left-color: #e51937;
 }

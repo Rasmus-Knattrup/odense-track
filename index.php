@@ -122,8 +122,8 @@
             <div class="news-center-article">
                 <div class="news-center-article-wrapper">
                     <article class="news-article">
-                        <div>
-                            <img src="img/book-evenet-center.png" alt="Placer holder">
+                        <div class="news-center-img-frame">
+                            <img src="img/book-evenet-center.png" alt="book-evenet-center.png">
                         </div>
                         <div class="news-article-content">
                             <h3 class="news-article-title">Book vores Event Center</h3>
@@ -134,7 +134,41 @@
                             </p>
                         </div>
                         <div class="news-center-arrow-wrapper">
-                            <i class="news-center-arrow right"></i>
+                            <i class="news-center-arrow"></i>
+                        </div>
+                    </article>
+
+                    <article class="news-article">
+                        <div class="news-center-img-frame">
+                            <img src="img/team-building.png" alt="team-building.png">
+                        </div>
+                        <div class="news-article-content">
+                            <h3 class="news-article-title">Team Building</h3>
+                            <p class="news-article-text">
+                                Trænger jeres virksomhed til Team Building, så 
+                                book en tid hos os, hvor Fart og Samarbejde er i 
+                                focus, og alle er garanteret en sjov dag.
+                            </p>
+                        </div>
+                        <div class="news-center-arrow-wrapper">
+                            <i class="news-center-arrow"></i>
+                        </div>
+                    </article>
+
+                    <article class="news-article">
+                        <div class="news-center-img-frame">
+                            <img src="img/lej-banen.png" alt="lej-banen.png">
+                        </div>
+                        <div class="news-article-content">
+                            <h3 class="news-article-title">Lej Banen</h3>
+                            <p class="news-article-text">
+                                Vil du have banen for dig selv eller sammen 
+                                med nogle venner, så kan du leje hele banen og 
+                                sætte løb op som du altid har drømt om.
+                            </p>
+                        </div>
+                        <div class="news-center-arrow-wrapper">
+                            <i class="news-center-arrow"></i>
                         </div>
                     </article>
                 </div>
