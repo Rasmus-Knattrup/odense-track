@@ -11,9 +11,11 @@
     <title>Odense Track</title>
 </head>
 <body>
+<!-- WRAPPER -->
 <div class="wrapper">
+    <!-- HEADER -->
     <header class="header">
-
+        <!-- TOP MENU -->
         <div class="top-menu">
             <div class="top-menu-box">
                 <span class="support">SUPPORT:</span>
@@ -22,6 +24,7 @@
             </div>
         </div>
 
+        <!-- MAIN-HEADER -->
         <div class="main-header">
             <div class="headerlogo-frame">
                 <img class="headerlogo" src="img/headerlogo.png" alt="">
@@ -47,6 +50,7 @@
             </div>
         </div>
 
+        <!-- MAIN-NAV -->
         <nav class="main-nav">
             <ul class="main-nav-ul">
                 <li>

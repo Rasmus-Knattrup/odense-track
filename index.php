@@ -1,8 +1,12 @@
 <?php include_once 'header.php'; ?>
 
+<!-- MAIN -->
 <main class="main">
+    <!-- HERO -->
     <img class="hero" src="img/hero.png" alt="">
+    <!-- EVENTS -->
     <section class="events">
+        <!-- EVENTS-HEADER -->
         <div class="events-header">
             <h1 class="events-title">EVENTS</h1>
             <div class="events-nav">
@@ -11,7 +15,8 @@
                 <button class="events-arrow events-arrow-right"> <i class="arrow right"></i> </button>
             </div>
         </div>
-
+        
+        <!-- EVENTS-MAIN -->
         <div class="events-main">
             <div class="events-thumbnail">
                 <img src="img/kalender.png" alt="">
@@ -35,13 +40,17 @@
             </div>
         </div>
 
+        <!-- EVENTS-FOOTER -->
         <div class="events-footer">
             <h2 class="events-footer-prior">>>TIDLIGERE EVENTS</h2>
         </div>
     </section>
 
+    <!-- NEWS -->
     <section class="news">
+        <!-- LATEST NEWS -->
         <div class="news-latest">
+            <!-- LATEST NEWS-HEADER -->
             <div class="news-latest-header">
                 <h2 class="news-title">BANE AKTIVITET</h2>
                 <span class="news-view-all"> <i class="arrow right view-all"></i> Se hele Event Kalenderen</span>
@@ -50,6 +59,8 @@
                     <button class="events-arrow news-arrow-up"> <i class="arrow up"></i> </button>
                 </div>
             </div>
+
+            <!-- LATEST NEWS-MAIN-->
             <div class="news-article-wrapper">
                 <div class="news-latest-date-wrapper">
                     <div class="news-latest-date">
@@ -72,7 +83,6 @@
                 </article>
             </div>
 
-            <!-- VVV TO BE DELETED VVV -->
             <div class="news-article-wrapper">
                 <div class="news-latest-date-wrapper">
                     <div class="news-latest-date">
@@ -94,6 +104,7 @@
                     </div>
                 </article>
             </div>
+
             <div class="news-article-wrapper">
                 <div class="news-latest-date-wrapper">
                     <div class="news-latest-date">
@@ -115,10 +126,15 @@
                     </div>
                 </article>
             </div>
+            
         </div>
 
+        <!-- (NEWS) EVENTS CENTER -->
         <div class="news-center">
+            <!-- EVENTS CENTER-HEADER -->
             <h2 class="news-title">EVENT CENTER</h2>
+
+            <!-- EVENTS CENTER-MAIN-->
             <div class="news-center-article">
                 <div class="news-center-article-wrapper">
                     <article class="news-article">

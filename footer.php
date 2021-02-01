@@ -1,8 +1,12 @@
 
     </div>
+    <!-- FOOTER -->
     <footer class="footer">
+        <!-- FOOTER WRAPPER -->
         <div class="footer-wrapper">
+            <!-- FOOTER MAIN-->
             <div class="footer-main">
+                <!-- FOOTER LOGO-->
                 <div class="footer-logo-frame">
                     <div class="logo">
                         <span class="logo-odense">ODENSE</span>
@@ -11,6 +15,7 @@
                     </div>
                 </div>
 
+                <!-- FOOTER SOCIALS -->
                 <div class="social-media">
                     <div class="social-media-content">
                         <h3 class="footer-main-title">FØLG OS HER</h3>
@@ -24,6 +29,7 @@
                     </div>
                 </div>
 
+                <!-- FOOTER NEWSLETTER-->
                 <div class="newsletter">
                     <div class="newsletter-content">
                         <h3 class="footer-main-title">TILMELD DIG VORES NYHEDSBREV</h3>
@@ -36,6 +42,7 @@
                 </div>
             </div>
 
+            <!-- FOOTER NAV -->
             <nav class="footer-nav">
                 <ul class="footer-nav-ul">
                     <li class="footer-nav-item">
