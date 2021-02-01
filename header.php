@@ -20,7 +20,7 @@
             <div class="top-menu-box">
                 <span class="support">SUPPORT:</span>
                 <img class="lettericon" src="img/lettericon.png" alt="">
-                <a class="ordernow" href="#">BESTIL NU</a>
+                <a class="ordernow" href="login.php">BESTIL NU</a>
             </div>
         </div>
 
