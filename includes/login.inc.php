@@ -16,14 +16,12 @@ class Login extends DBH {
     public function login( $username, $password ) {
 
         $this->sql = 'SELECT * FROM users WHERE username = ?';
-        $this->stmt = $this->conn->stmt_init();
-        $this->stmt->prepare( $this->sql );
-        $this->stmt->bind_param( "s", $this->username );
-        $this->stmt->execute();
+        $this->stmt = $this->conn->prepare( $this->sql );
+        $this->stmt->execute( [ $username ] );
 
         $this->stmt->fetch();
         $this->hashedpwd = $this->stmt->password;
-        $this->checkpwd = password_verify( $this->password, $this->hashedpwd );
+        $this->checkpwd = password_verify( $password, $this->hashedpwd );
 
         if ( $this->checkpwd === true ) {
 
