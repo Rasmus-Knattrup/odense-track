@@ -1,4 +1,4 @@
-<?php include_once 'header.php'; ?>
+<?php require_once 'header.php'; ?>
 
 <!-- MAIN -->
 <main class="main">
@@ -20,23 +20,23 @@
         <div class="events-main">
             <div class="events-thumbnail">
                 <img src="img/kalender.png" alt="">
-                <span class="events-label">EVENTS KALENDER</span>
+                <span class="label">EVENTS KALENDER</span>
             </div>
             <div class="events-thumbnail">
                 <img src="img/motion-for-alle.png" alt="">
-                <span class="events-label">Motion For Alle</span>
+                <span class="label">Motion For Alle</span>
             </div>
             <div class="events-thumbnail">
                 <img src="img/need-for-speed.png" alt="">
-                <span class="events-label">Need For Speed</span>
+                <span class="label">Need For Speed</span>
             </div>
             <div class="events-thumbnail">
                 <img src="img/odense-baneloeb.png" alt="">
-                <span class="events-label">Odense Baneløb</span>
+                <span class="label">Odense Baneløb</span>
             </div>
             <div class="events-thumbnail">
                 <img src="img/marathon.png" alt="">
-                <span class="events-label">Odense Marathon Løb</span>
+                <span class="label">Odense Marathon Løb</span>
             </div>
         </div>
 
@@ -193,4 +193,4 @@
     </section>
 </main>
 
-<?php include_once 'footer.php'; ?>
+<?php require_once 'footer.php'; ?>
