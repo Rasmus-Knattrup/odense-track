@@ -1,3 +1,6 @@
+<?php 
+    session_start(); 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,6 +30,7 @@
         <!-- MAIN-HEADER -->
         <div class="main-header">
             <div class="headerlogo-frame">
+                <a class="headerlogo-link" href="index.php">
                 <img class="headerlogo" src="img/headerlogo.png" alt="">
             </div>
             <div class="aboutus-nav">

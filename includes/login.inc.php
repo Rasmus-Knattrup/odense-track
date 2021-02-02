@@ -19,19 +19,18 @@ class Login extends DBH {
         $this->stmt = $this->conn->prepare( $this->sql );
         $this->stmt->execute( [ $username ] );
 
-        $this->stmt->fetch();
-        $this->hashedpwd = $this->stmt->password;
-        $this->checkpwd = password_verify( $password, $this->hashedpwd );
+        $this->row = $this->stmt->fetch();
+        $this->checkpwd = password_verify( $password, $this->row->password );
 
         if ( $this->checkpwd === true ) {
 
-            $this->session_start();
-
-            $_SESSION["id"] = $this->stmt->id;
-            $_SESSION["name"] = $this->stmt->name;
-            $_SESSION["username"] = $this->stmt->username;
-
+            $_SESSION["id"] = $this->row->id;
+            $_SESSION["name"] = $this->row->name;
+            $_SESSION["username"] = $this->row->username;
+            
         }
+
+        $this->stmt->close();
 
     }
 
