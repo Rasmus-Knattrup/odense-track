@@ -161,6 +161,11 @@
     padding: 36px;
 }
 
+.login-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
 .login-form {
     display: flex;
     flex-direction: column;
@@ -196,5 +201,33 @@
 }
 
 .error-message {
-    align-self: flex-end;
+    background-color: rgba(168, 18, 18, 0.4);
+    padding-left: 12px;
+    border-left: #c8142e solid 6px;
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-top: 12px;
+}
+.error-message-title.news-article-title {
+    font-weight: bold;
+    color: #c8142e;
+}
+.error-message-text.news-article-text {
+    font-size: 12.7px;
+}
+
+.login-message {
+    background-color: rgba(48, 175, 16, 0.4);
+    padding-left: 12px;
+    border-left: #32f30b solid 6px;
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-top: 12px;
+}
+.login-message-title.news-article-title {
+    font-weight: bold;
+    color: #32f30b;
+}
+.login-message-text.news-article-text {
+    font-size: 12.7px;
 }
