@@ -3,6 +3,10 @@
     require_once 'includes/login.inc.php'; 
 
     $login = new Login;
+
+    if ( isset( $_SESSION["id"] ) ) {
+        header("Location: index.php");
+    }
 ?>
 
 <!-- LOGIN MAIN -->
@@ -34,6 +38,10 @@
                             <p class="error-message-text news-article-text">Velkommen ' . $_SESSION["name"] . '!</p>
                         </div>';
 
+                        sleep(3);
+
+                        header("Refresh:0");
+
                     }
                     catch ( Exception $e ) {
 
@@ -45,6 +53,16 @@
                     }
 
                 }
+                /*if ( isset( $_SESSION["id"] ) ) {
+                    echo '<div class="login-message">
+                        <p class="login-message-title news-article-title">Success!:</p>
+                        <p class="error-message-text news-article-text">Velkommen ' . $_SESSION["name"] . '!</p>
+                    </div>';
+
+                    sleep(3);
+
+                    header("Location: index.php");
+                }*/
             ?>
         </div>
     </section>

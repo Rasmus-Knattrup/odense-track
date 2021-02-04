@@ -3,6 +3,13 @@
     background-color: #1c1c1c;
 }
 
+.logout-link {
+    font-family: 'Verdana';
+    font-size: 10.16px;
+    color: #999999;
+    padding: 12px;
+}
+
 .support {
     font-family: 'Myriad Pro';
     color: #a1141a;
@@ -28,14 +35,6 @@
     border-radius: 5px;
     text-decoration: none;
     align-self: center;
-}
-
-.aboutus-link {
-    font-family: 'Verdana';
-    text-decoration: none;
-    font-size: 10.16px;
-    color: #999999;
-    padding: 12px;
 }
 
 .line {

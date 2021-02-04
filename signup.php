@@ -3,6 +3,10 @@
     require_once 'includes/login.inc.php'; 
 
     $signup = new Login;
+
+    if ( isset( $_SESSION["id"] ) ) {
+        header("Location: index.php");
+    }
 ?>
 
 <main class="main">

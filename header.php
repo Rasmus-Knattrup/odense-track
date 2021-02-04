@@ -21,8 +21,7 @@
         <!-- TOP MENU -->
         <div class="top-menu">
             <div class="top-menu-box">
-                <a href="includes/logout.inc.php">Log ud</a>
-                <span class="support">Hello<?php echo $_SESSION["name"]; ?> </span>
+                <?php if ( isset( $_SESSION["id"] ) ) { echo '<a class="logout-link" href="includes/logout.inc.php">Log ud</a>'; }  ?>
                 <span class="support">SUPPORT:</span>
                 <img class="lettericon" src="img/lettericon.png" alt="">
                 <a class="ordernow" href="login.php">BESTIL NU</a>
