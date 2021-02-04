@@ -200,6 +200,15 @@
     outline: none;
 }
 
+.signup-link {
+    width: fit-content;
+    color: #999999;
+    font-size: 10.16px;
+    font-family: 'Verdana';
+    padding-bottom: 2px;
+    margin-top: 6px;
+}
+
 .error-message {
     background-color: rgba(168, 18, 18, 0.4);
     padding-left: 12px;
@@ -230,4 +239,19 @@
 }
 .login-message-text.news-article-text {
     font-size: 12.7px;
+}
+
+/* SIGN UP */
+
+.signup {
+    display: flex;
+    align-items: center;
+    background-color: #333333;
+    height: 60vh;
+    padding: 36px;
+}
+
+.signup-wrapper {
+    display: flex;
+    flex-direction: column;
 }

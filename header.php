@@ -1,7 +1,5 @@
 <?php 
     session_start();
-    session_unset();
-    session_destroy();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,6 +21,8 @@
         <!-- TOP MENU -->
         <div class="top-menu">
             <div class="top-menu-box">
+                <a href="includes/logout.inc.php">Log ud</a>
+                <span class="support">Hello<?php echo $_SESSION["name"]; ?> </span>
                 <span class="support">SUPPORT:</span>
                 <img class="lettericon" src="img/lettericon.png" alt="">
                 <a class="ordernow" href="login.php">BESTIL NU</a>
