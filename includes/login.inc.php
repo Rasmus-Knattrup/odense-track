@@ -1,6 +1,15 @@
 <?php
+// class DBH(Database handler)
 require_once 'dbconn.inc.php';
 
+/**
+ * class Login (subclass to DBH)
+ * 
+ * @property $conn
+ * @method __construct()
+ * @method login( string $username, string $password )
+ * @method signup( string $name, string $username, string $password, string $validPassword, string $email )
+ */
 class Login extends DBH {
 
     // Properties

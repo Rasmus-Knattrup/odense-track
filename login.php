@@ -38,9 +38,7 @@
                             <p class="error-message-text news-article-text">Velkommen ' . $_SESSION["name"] . '!</p>
                         </div>';
 
-                        sleep(3);
-
-                        header("Refresh:0");
+                        header("Refresh:2");
 
                     }
                     catch ( Exception $e ) {
@@ -53,16 +51,6 @@
                     }
 
                 }
-                /*if ( isset( $_SESSION["id"] ) ) {
-                    echo '<div class="login-message">
-                        <p class="login-message-title news-article-title">Success!:</p>
-                        <p class="error-message-text news-article-text">Velkommen ' . $_SESSION["name"] . '!</p>
-                    </div>';
-
-                    sleep(3);
-
-                    header("Location: index.php");
-                }*/
             ?>
         </div>
     </section>
