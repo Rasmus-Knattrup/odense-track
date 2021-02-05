@@ -1,9 +1,13 @@
 <?php 
-    require_once 'header.php'; 
-    require_once 'includes/login.inc.php'; 
+    // Header
+    require_once 'header.php';
+    // Login class
+    require_once 'includes/login.inc.php';
 
+    // New object
     $login = new Login;
 
+    // When logged in, you return to frontpage
     if ( isset( $_SESSION["id"] ) ) {
         header("Location: index.php");
     }
@@ -11,22 +15,31 @@
 
 <!-- LOGIN MAIN -->
 <main class="main">
+    <!-- LOGIN SECTION -->
     <section class="login">
         <div class="login-wrapper">
+            <!-- LOGIN FORM -->
             <form class="login-form" action="" method="post">
+                <!-- USERNAME -->
                 <label class="label" for="username">Brugernavn:</label>
                 <input class="login-input" type="text" name="username">
 
+                <!-- PASSWORD -->
                 <label class="label" for="password">Kodeord:</label>
                 <input class="login-input" type="password" name="password">
 
+                <!-- SUBMIT -->
                 <button class="login-submit" type="submit" name="submit">Login</button>
+
+                <!-- SIGN UP -->
                 <div>
                     <span class="signup-link">Har du ikke et login? </span>
                     <a class="signup-link" href="signup.php">Sign up</a>
                     <span class="signup-link"> nu!</span>
                 </div>
             </form>
+
+            <!-- PHP FOR LOGIN -->
             <?php
                 if ( isset( $_POST["submit"] ) ) {
 
@@ -56,4 +69,5 @@
     </section>
 </main>
 
+<!-- Footer -->
 <?php include_once 'footer.php'; ?>
