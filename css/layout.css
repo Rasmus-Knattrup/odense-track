@@ -147,6 +147,8 @@
 .footer {
     background-color: #111111;
     height: 195px;
+    width: 100%;
+    position: absolute;
 }
 
 /******/
@@ -253,4 +255,39 @@
 .signup-wrapper {
     display: flex;
     flex-direction: column;
+}
+
+/*****/
+
+/* NEWS PAGE */
+
+.news-overview {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: min-content;
+}
+
+.news-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333333;
+    width: 25%;
+    height: 148px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 12px;
+    margin: 24px;
+}
+.news-overview-date {
+    display: inline-block;
+    width: 100%;
+    background-color: #009ea6;
+    font-size: 17.78px;
+    color: #ffffff;
+    font-family: sans-serif;
+    text-align: center;
+    border-radius: 12px;
 }

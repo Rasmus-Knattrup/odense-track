@@ -141,6 +141,7 @@
     font-family: 'Verdana';
     margin-top: 12px;
     margin-bottom: 6px;
+    align-self: baseline;
 }
 .news-article-text {
     font-size: 10.17px;
@@ -252,4 +253,12 @@
     font-family: 'Verdana';
     margin-top: 12px;
     margin-bottom: 12px;
+}
+
+/******/
+
+/* NEWS PAGE */
+
+.margin-g {
+    margin-top: auto;
 }

@@ -1,7 +1,7 @@
 
     </div>
     <!-- FOOTER -->
-    <footer class="footer">
+    <footer class="footer margin-g">
         <!-- FOOTER WRAPPER -->
         <div class="footer-wrapper">
             <!-- FOOTER MAIN-->

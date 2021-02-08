@@ -1,12 +1,13 @@
 /* BODY & WRAPPER */
-body {
+html, body {
     margin: 0;
     background-image: url('../img/background.png');
 }
 
 .wrapper {
     width: 990px;
-    display: block;
+    display: flex;
+    flex-direction: column;
     margin-left: auto;
     margin-right: auto;
 }
