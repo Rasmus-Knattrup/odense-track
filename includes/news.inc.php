@@ -75,8 +75,10 @@ class News extends DBH {
 
         $this->row = $this->stmt->fetchAll();
 
-        $this->row->date = $this->get_date( $this->row->date );
-            
+        foreach ( $this->row as $row ) {
+            $row->date = $this->get_date( $row->date );
+        }
+    
         return $this->row;
 
     }
