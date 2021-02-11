@@ -65,7 +65,7 @@
                 <li>
                     <!-- Update Events link (admin only) -->
                     <?php if ( isset( $_SESSION["id"] ) && $_SESSION["id"] == 1 ) : ?>
-                    <a href="includes/events.inc.php" class="main-nav-link">EVENTS</a>
+                    <a href="events.admin.php" class="main-nav-link">EVENTS</a>
 
                     <!-- Overview of Events -->
                     <?php else : ?>
@@ -76,7 +76,7 @@
                 <li>
                     <!-- Update News link (admin only) -->
                     <?php if ( isset( $_SESSION["id"] ) && $_SESSION["id"] == 1 ) : ?>
-                    <a href="includes/news.inc.php" class="main-nav-link">NYHEDER</a>
+                    <a href="news.admin.php" class="main-nav-link">NYHEDER</a>
 
                     <!-- Overview of News -->
                     <?php else : ?>

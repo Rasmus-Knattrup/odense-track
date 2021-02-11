@@ -36,7 +36,7 @@ class News extends DBH {
                 $this->news_date_month = "APR";
                 break;
             case '05': 
-                $this->news_date_month = "MAY";
+                $this->news_date_month = "MAJ";
                 break;
             case '06': 
                 $this->news_date_month = "JUN";
@@ -51,7 +51,7 @@ class News extends DBH {
                 $this->news_date_month = "SEP";
                 break;
             case '10': 
-                $this->news_date_month = "OCT";
+                $this->news_date_month = "OKT";
                 break;
             case '11': 
                 $this->news_date_month = "NOV";
@@ -69,7 +69,7 @@ class News extends DBH {
 
     public function print_news() {
 
-        $this->sql = 'SELECT * FROM news';
+        $this->sql = 'SELECT title, content, date, SUBSTRING(content, 1, 140) AS preview FROM news ORDER BY date DESC';
         $this->stmt = $this->conn->prepare( $this->sql );
         $this->stmt->execute();
 
