@@ -182,25 +182,6 @@
     outline: none;
 }
 
-.login-submit {
-    width: fit-content;
-    background-color: #c8142e;
-    color: #ffffff;
-    font-size: 10.16px;
-    font-family: 'Verdana';
-    font-weight: bold;
-    padding: 6px;
-    border: none;
-    border-radius: 5px;
-    margin-top: 6px;
-}
-.login-submit:active {
-    background-color: #a1141a;
-}
-.login-submit:focus {
-    outline: none;
-}
-
 .signup-link {
     width: fit-content;
     color: #999999;
@@ -304,6 +285,9 @@
 .news-form-wrapper {
     display: flex;
     width: 100%;
+    padding-bottom: 24px;
+    border-bottom: #2e2e2e solid 1px;
+    margin-bottom: 12px;
 }
 .news-form {
     display: flex;

@@ -29,7 +29,7 @@
                 <input class="login-input" type="password" name="password">
 
                 <!-- SUBMIT -->
-                <button class="login-submit" type="submit" name="submit">Login</button>
+                <button class="submit" type="submit" name="submit">Login</button>
 
                 <!-- SIGN UP -->
                 <div>

@@ -152,8 +152,8 @@
 }
 .news-read_more-wrapper {
     display: flex;
-    justify-content: center;
-    width: 140px;
+    justify-content: space-around;
+    width: 100%;
 }
 .news-latest-article-read_more {
     font-size: 12.7px;
@@ -261,4 +261,25 @@
 
 .margin-g {
     margin-top: auto;
+}
+
+
+/* NEWS PAGE ADMIN */
+.submit {
+    width: fit-content;
+    background-color: #c8142e;
+    color: #ffffff;
+    font-size: 10.16px;
+    font-family: 'Verdana';
+    font-weight: bold;
+    padding: 6px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 6px;
+}
+.submit:active {
+    background-color: #a1141a;
+}
+.submit:focus {
+    outline: none;
 }

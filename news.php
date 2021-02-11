@@ -1,7 +1,7 @@
 <?php 
     // Header
     require_once 'header.php';
-    // Login class
+    // News class
     require_once 'includes/news.inc.php';
 ?>
 
