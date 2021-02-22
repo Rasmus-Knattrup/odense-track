@@ -78,7 +78,7 @@
                         </p>
                     </div>
                     <div class="news-read_more-wrapper">
-                        <a class="news-latest-article-read_more" href="#">LÆS MERE</a>
+                        <a class="news-latest-article-read_more" href="news.readmore.php?id=1">LÆS MERE</a>
                     </div>
                 </article>
             </div>
@@ -100,7 +100,7 @@
                         </p>
                     </div>
                     <div class="news-read_more-wrapper">
-                        <a class="news-latest-article-read_more" href="#">LÆS MERE</a>
+                        <a class="news-latest-article-read_more" href="news.readmore.php?id=2">LÆS MERE</a>
                     </div>
                 </article>
             </div>
@@ -122,7 +122,7 @@
                         </p>
                     </div>
                     <div class="news-read_more-wrapper">
-                        <a class="news-latest-article-read_more" href="#">LÆS MERE</a>
+                        <a class="news-latest-article-read_more" href="news.readmore.php?id=3">LÆS MERE</a>
                     </div>
                 </article>
             </div>

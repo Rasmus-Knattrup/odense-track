@@ -27,7 +27,7 @@
                         ' . $row->preview . '...
                     </p>
                     <div class="news-read_more-wrapper margin-g">
-                        <a class="news-latest-article-read_more" href="#">LÆS MERE</a>
+                        <a class="news-latest-article-read_more" href="news.readmore.php?id=' . $row->id . '">LÆS MERE</a>
                     </div>
                 </div>';
             }

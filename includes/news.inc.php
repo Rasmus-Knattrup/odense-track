@@ -69,7 +69,7 @@ class News extends DBH {
 
     public function print_news() {
 
-        $this->sql = "SELECT title, content, date, SUBSTRING(content, 1, 140) AS preview FROM news ORDER BY date DESC";
+        $this->sql = "SELECT id, title, content, date, SUBSTRING(content, 1, 140) AS preview FROM news ORDER BY date DESC";
         $this->stmt = $this->conn->prepare( $this->sql );
         $this->stmt->execute();
 
@@ -92,6 +92,20 @@ class News extends DBH {
         $this->sql = "INSERT INTO news (title, content) VALUES ( ?, ? )";
         $this->stmt = $this->conn->prepare( $this->sql );
         $this->stmt->execute( [ $title, $content ] );
+
+    }
+
+    public function read_news( $id ) {
+
+        $this->sql = "SELECT title, content, date FROM news WHERE id = ?";
+        $this->stmt = $this->conn->prepare( $this->sql );
+        $this->stmt->execute( [ $id ] );
+
+        if ( $this->stmt->rowCount() === 0 ) {
+            header("Location: news.php");
+        }
+
+        return $this->stmt->fetch();
 
     }
 

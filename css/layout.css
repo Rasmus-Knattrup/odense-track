@@ -299,3 +299,25 @@
 .insert-message {
     width: 232px;
 }
+
+/* NEWS PAGE READ MORE */
+
+.news-readmore-wrapper {
+    background-color: #333333;
+    height: 100%;
+}
+.news-readmore-title {
+    color: #ffffff;
+    font-family: 'Verdana';
+    font-size: 20px;
+    padding: 12px;
+}
+.news-readmore-content {
+    width: 540px;
+    margin: 24px;
+}
+.news-readmore-text {
+    color: #ffffff;
+    font-family: 'Verdana';
+    font-size: 18px;
+}
