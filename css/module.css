@@ -131,8 +131,6 @@
     font-family: 'Verdana';
 }
 .news-article-content {
-    height: 100%;
-    width: 256px;
     padding-left: 24px;
 }
 .news-article-title {
@@ -177,7 +175,7 @@
     display: flex;
     justify-content: center;
     height: fit-content;
-    width: 85px;
+    width: 240px;
 }
 .news-center-arrow {
     border: 8px solid transparent;

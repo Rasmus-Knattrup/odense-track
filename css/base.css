@@ -198,7 +198,7 @@ html, body {
 .footer-nav {
     display: flex;
     align-items: center;
-    height: 46px;
+    height: 44px;
 }
 .footer-nav-ul {
     display: flex;

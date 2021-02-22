@@ -44,6 +44,7 @@
                 if ( isset( $_POST["submit"] ) ) {
 
                     try {
+
                         $login->login( $_POST["username"], $_POST["password"] );
 
                         echo '<div class="login-message">
@@ -51,7 +52,7 @@
                             <p class="error-message-text news-article-text">Velkommen ' . $_SESSION["name"] . '!</p>
                         </div>';
 
-                        header("Refresh:2");
+                        header("Refresh:1");
 
                     }
                     catch ( Exception $e ) {

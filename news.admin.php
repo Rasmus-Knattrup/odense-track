@@ -1,13 +1,16 @@
 <?php 
-    // If the user is not admin(id 1) then they are thrown back to news.php
-    if ( empty( $_SESSION["id"] ) || $_SESSION["id"] ==! 1 ) {
-        header("Location: news.php");
-    }
-
     // Header
     require_once 'header.php';
     // News class
     require_once 'includes/news.inc.php';
+
+    // New object
+    $news = new News;
+
+    // If the user is not admin(id 1) then they are thrown back to news.php
+    if ( empty( $_SESSION["id"] ) || $_SESSION["id"] ==! 1 ) {
+        header("Location: news.php");
+    }
 ?>
 
 <!-- MAIN -->
@@ -23,10 +26,35 @@
                 <input name="title" type="text">
 
                 <label class="label" for="content">Indhold:</label>
-                <textarea name="content" cols="100" rows="50"></textarea>
+                <textarea name="content" cols="100" rows="20"></textarea>
 
-                <button class="submit">Insend</button>
+                <button class="submit" type="submit" name="submit">Insend</button>
             </form>
+
+            <!-- PHP FOR LOGIN -->
+            <?php
+                if ( isset( $_POST["submit"] ) ) {
+
+                    try {
+
+                        $news->insert_news( $_POST["title"], $_POST["content"] );
+
+                        echo '<div class="login-message insert-message">
+                            <p class="login-message-title news-article-title">Success!:</p>
+                            <p class="error-message-text news-article-text">Nyhed oprettet!</p>
+                        </div>';
+
+                    } catch ( Exception $e ) {
+
+                        echo '<div class="error-message">
+                            <p class="error-message-title news-article-title">ERROR:</p>
+                            <p class="error-message-text news-article-text">' . $e->getMessage() . '</p>
+                        </div>';
+
+                    }
+                
+                }
+            ?>
         </div>
     </section>
     <section class="news-overview">
@@ -36,7 +64,7 @@
 
         <!-- CARD PRINTER -->
         <?php
-            $news = new News;
+
             $rows = $news->print_news();
 
             foreach ( $rows as $row ) {

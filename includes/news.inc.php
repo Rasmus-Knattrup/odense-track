@@ -1,5 +1,5 @@
 <?php
-// class DBH(Database handler)
+// class DBH (Database handler)
 require_once 'dbconn.inc.php';
 
 class News extends DBH {
@@ -22,7 +22,7 @@ class News extends DBH {
         $this->news_date_day = substr( $date, 8, -9 );
 
         $this->news_date_month = substr( $date, 5, -12 );
-        switch ($this->news_date_month) {
+        switch ( $this->news_date_month ) {
             case '01': 
                 $this->news_date_month = "JAN";
                 break;
@@ -69,7 +69,7 @@ class News extends DBH {
 
     public function print_news() {
 
-        $this->sql = 'SELECT title, content, date, SUBSTRING(content, 1, 140) AS preview FROM news ORDER BY date DESC';
+        $this->sql = "SELECT title, content, date, SUBSTRING(content, 1, 140) AS preview FROM news ORDER BY date DESC";
         $this->stmt = $this->conn->prepare( $this->sql );
         $this->stmt->execute();
 
@@ -83,8 +83,16 @@ class News extends DBH {
 
     }
 
-    /*public function insert_news() {
+    public function insert_news( $title, $content ) {
 
-    }*/
+        if ( empty( $title ) || empty( $content ) ) {
+            throw new Exception("Tomt input");
+        }
+
+        $this->sql = "INSERT INTO news (title, content) VALUES ( ?, ? )";
+        $this->stmt = $this->conn->prepare( $this->sql );
+        $this->stmt->execute( [ $title, $content ] );
+
+    }
 
 }
