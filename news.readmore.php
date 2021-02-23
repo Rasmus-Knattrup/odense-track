@@ -13,15 +13,18 @@
 ?>
 
 <main class="main">
-    <section>
-        <article class="news-readmore-wrapper">
+    <section class="news-readmore-wrapper">
+        <article>
             <header>
                 <h2 class="news-readmore-title"><?php echo $article->title; ?></h2>
+                <span class="news-readmore-date"><?php echo $article->date; ?></span>
             </header>
 
             <div class="news-readmore-content">
                 <p class="news-readmore-text"><?php echo $article->content; ?></p>
             </div>
+
+            <p class="signup-link-text">Læs flere nyheder <a class="signup-link" href="news.php">her</a>!</p>
         </article>
     </section>
 </main>

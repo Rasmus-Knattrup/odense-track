@@ -7,6 +7,11 @@
     // New object
     $news = new News;
 
+    // Cardprinter function
+    if ( isset( $_GET["id"] ) ) {
+        $edit = $news->edit_news( $_GET["id"] );
+    }
+
     // If the user is not admin(id 1) then they are thrown back to news.php
     if ( empty( $_SESSION["id"] ) || $_SESSION["id"] ==! 1 ) {
         header("Location: news.php");
@@ -21,23 +26,30 @@
         </div>
 
         <div class="news-form-wrapper">
-            <form class="news-form" action="" method="post">
+            <form class="news-form" action="news.admin.php" method="post">
                 <label class="label" for="title">Titel:</label>
-                <input name="title" type="text">
+                <input name="title" type="text" <?php if ( isset( $_GET["id"] ) ) { echo 'value="' . $edit->title . '"'; } ?> >
 
                 <label class="label" for="content">Indhold:</label>
-                <textarea name="content" cols="100" rows="20"></textarea>
+                <textarea name="content" cols="100" rows="20"><?php if ( isset( $_GET["id"] ) ) { echo $edit->content; } ?></textarea>
+
+                <input name="id" type="hidden" value="<?php if ( isset( $_GET["id"] ) ) { echo $_GET["id"]; } ?>">
 
                 <button class="submit" type="submit" name="submit">Insend</button>
             </form>
 
-            <!-- PHP FOR LOGIN -->
+            <!-- PHP FOR NEWS OPERATIONS -->
             <?php
                 if ( isset( $_POST["submit"] ) ) {
 
                     try {
 
-                        $news->insert_news( $_POST["title"], $_POST["content"] );
+                        if ( isset( $_POST["id"] ) ) {
+                            $news->update_news( $_POST["id"], $_POST["title"], $_POST["content"] );
+                        }
+                        else {
+                            $news->insert_news( $_POST["title"], $_POST["content"] );
+                        }
 
                         echo '<div class="login-message insert-message">
                             <p class="login-message-title news-article-title">Success!:</p>
@@ -76,7 +88,7 @@
                     </p>
                     <div class="news-read_more-wrapper margin-g">
                         <a class="news-latest-article-read_more" href="news.readmore.php?id=' . $row->id . '">LÆS MERE</a>
-                        <a class="news-latest-article-read_more" href="#">REDIGER</a>
+                        <a class="news-latest-article-read_more" href="?id=' . $row->id . '">REDIGER</a>
                     </div>
                 </div>';
             }

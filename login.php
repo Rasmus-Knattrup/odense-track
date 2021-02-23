@@ -33,9 +33,9 @@
 
                 <!-- SIGN UP -->
                 <div>
-                    <span class="signup-link">Har du ikke et login? </span>
+                    <span class="signup-link-text">Har du ikke et login? </span>
                     <a class="signup-link" href="signup.php">Sign up</a>
-                    <span class="signup-link"> nu!</span>
+                    <span class="signup-link-text"> nu!</span>
                 </div>
             </form>
 

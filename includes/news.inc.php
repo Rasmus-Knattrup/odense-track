@@ -95,6 +95,28 @@ class News extends DBH {
 
     }
 
+    public function edit_news( $id ) {
+
+        $this->sql = "SELECT id, title, content FROM news WHERE id = ?";
+        $this->stmt = $this->conn->prepare( $this->sql );
+        $this->stmt->execute( [ $id ] );
+    
+        return $this->stmt->fetch();
+
+    }
+
+    public function update_news( $id, $title, $content ) {
+
+        if ( empty( $title ) || empty( $content ) ) {
+            throw new Exception("Tomt input");
+        }
+
+        $this->sql = "UPDATE news SET title = ?, content = ? WHERE id = ?";
+        $this->stmt = $this->conn->prepare( $this->sql );
+        $this->stmt->execute( [ $title, $content, $id ] );
+
+    }
+
     public function read_news( $id ) {
 
         $this->sql = "SELECT title, content, date FROM news WHERE id = ?";
