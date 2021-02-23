@@ -32,7 +32,8 @@
         <div class="main-header">
             <div class="headerlogo-frame">
                 <a class="headerlogo-link" href="index.php">
-                <img class="headerlogo" src="img/headerlogo.png" alt="">
+                    <img class="headerlogo" src="img/headerlogo.png" alt="">
+                </a>
             </div>
             <div class="aboutus-nav">
                 <ul class="aboutus-nav-ul">

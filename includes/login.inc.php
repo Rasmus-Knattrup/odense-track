@@ -1,5 +1,5 @@
 <?php
-// class DBH(Database handler)
+// class DBH (Database handler)
 require_once 'dbconn.inc.php';
 
 /**
