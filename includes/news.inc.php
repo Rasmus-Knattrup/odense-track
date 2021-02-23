@@ -2,21 +2,62 @@
 // class DBH (Database handler)
 require_once 'dbconn.inc.php';
 
+/**
+ * class News (subclass to DBH)
+ * 
+ * @property $conn
+ * @property $news_date
+ * @property $news_date_day
+ * @property $news_date_month
+ * @method __construct()
+ * @method get_date( string $date )
+ * @method print_news()
+ * @method insert_news( string $title, string $content )
+ * @method edit_news( int $id )
+ * @method update_news( $id, string $title, string $content )
+ * @method read_news( int $id )
+ */
 class News extends DBH {
 
     // Properties
+    /**
+     * Connection to database
+     *
+     * @var object $conn
+     */
     private $conn;
+
+    /**
+     * Credentials to get_date()
+     *
+     * @var string $news_date
+     * @var int $news_date_day
+     * @var string $news_date_month
+     */
     private $news_date;
     private $news_date_day;
     private $news_date_month;
 
     // Methods
+    /**
+     * Sets $conn to db_connect()
+     *
+     * @method __construct()
+     * @return void
+     */
     function __construct() {
 
         $this->conn = $this->db_connect();
 
     }
 
+    /**
+     * Styleizes a given date for the site
+     *
+     * @method get_date( @param )
+     * @param string $date [Date from database]
+     * @return string $this->news_date
+     */
     private function get_date( $date ) {
 
         $this->news_date_day = substr( $date, 8, -9 );
@@ -67,6 +108,12 @@ class News extends DBH {
 
     }
 
+    /**
+     * Prints all news from database
+     * 
+     * @method print_news()
+     * @return object $this->row
+     */
     public function print_news() {
 
         $this->sql = "SELECT id, title, content, date, SUBSTRING(content, 1, 140) AS preview FROM news ORDER BY date DESC";
@@ -83,6 +130,14 @@ class News extends DBH {
 
     }
 
+    /**
+     * Inserts a new news article to the database
+     * 
+     * @method insert_news( @param, @param )
+     * @param string $title
+     * @param string $content
+     * @return void
+     */
     public function insert_news( $title, $content ) {
 
         if ( empty( $title ) || empty( $content ) ) {
@@ -95,6 +150,13 @@ class News extends DBH {
 
     }
 
+    /**
+     * Prints all news from database
+     * 
+     * @method print_news( @param )
+     * @param int $id
+     * @return object $this->stmt->fetch()
+     */
     public function edit_news( $id ) {
 
         $this->sql = "SELECT id, title, content FROM news WHERE id = ?";
@@ -105,6 +167,15 @@ class News extends DBH {
 
     }
 
+    /**
+     * Prints all news from database
+     * 
+     * @method print_news( @param, @param, @param )
+     * @param int $id
+     * @param string $title
+     * @param string $content
+     * @return void
+     */
     public function update_news( $id, $title, $content ) {
 
         if ( empty( $title ) || empty( $content ) ) {
@@ -117,6 +188,13 @@ class News extends DBH {
 
     }
 
+    /**
+     * Prints all news from database
+     * 
+     * @method print_news( @param )
+     * @param int $id
+     * @return object $this->stmt->fetch()
+     */
     public function read_news( $id ) {
 
         $this->sql = "SELECT title, content, date FROM news WHERE id = ?";
