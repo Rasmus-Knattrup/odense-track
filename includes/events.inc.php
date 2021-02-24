@@ -45,4 +45,10 @@ class Events extends DBH {
 
     }
 
+    private function get_image( $image ) {
+
+        
+
+    }
+
 }
