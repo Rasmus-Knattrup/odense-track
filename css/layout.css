@@ -378,8 +378,10 @@
 /* EVENTS READ MORE PAGE */
 
 .events-readmore-img {
-    width: 100%;
+    align-items: flex-end;
+    display: flex;
 }
 .events-readmore-img img {
-    box-shadow: 1px 1px 8px #009ea6;
+    box-shadow: 1px 1px 8px black;
+    width: 196px;
 }

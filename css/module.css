@@ -182,6 +182,12 @@
     border-left-color: #e51937;
 }
 
+/* EVENTS */
+
+.events-link {
+    text-decoration: none;
+}
+
 /* FOOTER */
 
 .logo {

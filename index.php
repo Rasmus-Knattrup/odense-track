@@ -19,24 +19,34 @@
         <!-- EVENTS-MAIN -->
         <div class="events-main">
             <div class="events-thumbnail">
-                <img src="img/kalender.png" alt="">
-                <span class="label">EVENTS KALENDER</span>
+                <a class="events-link" href="events.readmore.php?id=1">
+                    <img src="img/kalender.png" alt="">
+                    <span class="label">EVENTS KALENDER</span>
+                </a>
             </div>
             <div class="events-thumbnail">
-                <img src="img/motion-for-alle.png" alt="">
-                <span class="label">Motion For Alle</span>
+                <a class="events-link" href="events.readmore.php?id=2">
+                    <img src="img/motion-for-alle.png" alt="">
+                    <span class="label">Motion For Alle</span>
+                </a>
             </div>
             <div class="events-thumbnail">
-                <img src="img/need-for-speed.png" alt="">
-                <span class="label">Need For Speed</span>
+                <a class="events-link" href="events.readmore.php?id=3">
+                    <img src="img/need-for-speed.png" alt="">
+                    <span class="label">Need For Speed</span>
+                </a>
             </div>
             <div class="events-thumbnail">
-                <img src="img/odense-baneloeb.png" alt="">
-                <span class="label">Odense Baneløb</span>
+                <a class="events-link" href="events.readmore.php?id=4">
+                    <img src="img/odense-baneloeb.png" alt="">
+                    <span class="label">Odense Baneløb</span>
+                </a>
             </div>
             <div class="events-thumbnail">
-                <img src="img/marathon.png" alt="">
-                <span class="label">Odense Marathon Løb</span>
+                <a class="events-link" href="events.readmore.php?id=5">
+                    <img src="img/marathon.png" alt="">
+                    <span class="label">Odense Marathon Løb</span>
+                </a>
             </div>
         </div>
 
