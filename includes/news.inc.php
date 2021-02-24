@@ -151,26 +151,9 @@ class News extends DBH {
     }
 
     /**
-     * Prints all news from database
+     * Edits a news article from database
      * 
-     * @method print_news( @param )
-     * @param int $id
-     * @return object $this->stmt->fetch()
-     */
-    public function edit_news( $id ) {
-
-        $this->sql = "SELECT id, title, content FROM news WHERE id = ?";
-        $this->stmt = $this->conn->prepare( $this->sql );
-        $this->stmt->execute( [ $id ] );
-    
-        return $this->stmt->fetch();
-
-    }
-
-    /**
-     * Prints all news from database
-     * 
-     * @method print_news( @param, @param, @param )
+     * @method update_news( @param, @param, @param )
      * @param int $id
      * @param string $title
      * @param string $content
@@ -189,9 +172,9 @@ class News extends DBH {
     }
 
     /**
-     * Prints all news from database
+     * Prints a specific news article from database
      * 
-     * @method print_news( @param )
+     * @method read_news( @param )
      * @param int $id
      * @return object $this->stmt->fetch()
      */

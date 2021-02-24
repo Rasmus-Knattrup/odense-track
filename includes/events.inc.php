@@ -24,4 +24,25 @@ class Events extends DBH {
 
     }
 
+    /**
+     * Prints a specific event article from database
+     * 
+     * @method read_event( @param )
+     * @param int $id
+     * @return object $this->stmt->fetch()
+     */
+    public function read_event( $id ) {
+
+        $this->sql = "SELECT id, title, content, image FROM events WHERE id = ?";
+        $this->stmt = $this->conn->prepare( $this->sql );
+        $this->stmt->execute( [ $id ] );
+
+        if ( $this->stmt->rowCount() === 0 ) {
+            header("Location: events.php");
+        }
+
+        return $this->stmt->fetch();
+
+    }
+
 }

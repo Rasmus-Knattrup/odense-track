@@ -254,7 +254,6 @@
 .news-overview {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
 }
 
 .news-header {
@@ -339,8 +338,15 @@
 
 /* EVENTS PAGE */
 
+.events-card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .events-card {
     display: flex;
+    flex-direction: column;
     align-items: center;
     background-color: #333333;
     width: 40%;
@@ -351,12 +357,29 @@
     border-radius: 12px;
     margin: 24px;
 }
+.events-card-child {
+    display: flex;
+    min-width: 100%;
+}
 .events-img {
+    display: flex;
+    align-items: flex-end;
     width: 148px;
 }
 .events-img img {
     width: 148px;
+    box-shadow: 1px 1px 8px black;
 }
 .events-card-content {
     margin-left: 12px;
+    height: 100%;
+}
+
+/* EVENTS READ MORE PAGE */
+
+.events-readmore-img {
+    width: 100%;
+}
+.events-readmore-img img {
+    box-shadow: 1px 1px 8px #009ea6;
 }

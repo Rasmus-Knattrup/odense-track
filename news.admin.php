@@ -9,7 +9,7 @@
 
     // Cardprinter function
     if ( isset( $_GET["id"] ) ) {
-        $edit = $news->edit_news( $_GET["id"] );
+        $edit = $news->read_news( $_GET["id"] );
     }
 
     // If the user is not admin(id 1) then they are thrown back to news.php
