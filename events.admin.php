@@ -34,7 +34,14 @@
                 <textarea name="content" cols="100" rows="20"><?php if ( isset( $_GET["id"] ) ) { echo $edit->content; } ?></textarea>
 
                 <label class="label" for="title">Billede:</label>
-                <input name="image" type="file" >
+                <input class="events-file-input" name="image" type="file" >
+
+                <?php if ( isset( $_GET["id"] ) ) : ?>
+                <div class="events-current-img-wrapper">
+                    <label class="label">Nuværende Billede:</label>
+                    <span class="events-current-img"><?php echo $edit->image; ?></span>
+                </div>
+                <?php endif; ?>
 
                 <input name="id" type="hidden" value="<?php if ( isset( $_GET["id"] ) ) { echo $_GET["id"]; } ?>" >
 
@@ -48,10 +55,10 @@
                     try {
 
                         if ( isset( $_POST["id"] ) ) {
-                            $events->update_event( $_POST["id"], $_POST["title"], $_POST["content"], $_FILES["image"] );
+                            $events->update_event( $_POST["id"], $_POST["title"], $_POST["content"], $_FILES["image"]["name"] );
                         }
                         else {
-                            $events->insert_event( $_POST["title"], $_POST["content"], $_FILES["image"] );
+                            $events->insert_event( $_POST["title"], $_POST["content"], $_FILES["image"]["name"] );
                         }
 
                         echo '<div class="login-message insert-message">

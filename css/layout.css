@@ -385,3 +385,23 @@
     box-shadow: 1px 1px 8px black;
     width: 196px;
 }
+
+/* EVENTS ADMIN PAGE */
+
+.events-file-input {
+    color: #ffffff;
+    font-family: 'Verdana';
+    width: fit-content;
+}
+
+.events-current-img-wrapper {
+    margin-top: 12px;
+    margin-bottom: 6px;
+}
+.events-current-img {
+    width: fit-content;
+    color: #ffffff;
+    font-family: 'Verdana';
+    font-size: 12.17px;
+    border-bottom: #ffffff solid 1px;
+}
