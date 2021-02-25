@@ -33,7 +33,10 @@
                 <label class="label" for="content">Indhold:</label>
                 <textarea name="content" cols="100" rows="20"><?php if ( isset( $_GET["id"] ) ) { echo $edit->content; } ?></textarea>
 
-                <input name="id" type="hidden" value="<?php if ( isset( $_GET["id"] ) ) { echo $_GET["id"]; } ?>">
+                <?php if ( isset( $_GET["id"] ) ) : ?>
+                    <input name="id" type="hidden" value="<?php echo $_GET["id"]; ?>">
+                <?php endif; ?>
+                
 
                 <button class="submit" type="submit" name="submit">Insend</button>
             </form>

@@ -26,7 +26,7 @@
         </div>
 
         <div class="news-form-wrapper">
-            <form class="news-form" action="news.admin.php" method="post">
+            <form class="news-form" action="events.admin.php" method="post" enctype="multipart/form-data">
                 <label class="label" for="title">Titel:</label>
                 <input name="title" type="text" value="<?php if ( isset( $_GET["id"] ) ) { echo $edit->title; } ?>" >
 
@@ -43,22 +43,40 @@
                 </div>
                 <?php endif; ?>
 
-                <input name="id" type="hidden" value="<?php if ( isset( $_GET["id"] ) ) { echo $_GET["id"]; } ?>" >
+                <!-- HIDDEN INPUTS -->
+                <?php if ( isset( $_GET["id"] ) ) : ?>
+                    <input name="id" type="hidden" value="<?php echo $_GET["id"]; ?>" >
+                    <input name="current_image" type="hidden" value="<?php echo $edit->image; ?>" >
+                <?php endif; ?>
 
                 <button class="submit" type="submit" name="submit">Insend</button>
             </form>
 
             <!-- PHP FOR NEWS OPERATIONS -->
             <?php
+
                 if ( isset( $_POST["submit"] ) ) {
 
                     try {
 
                         if ( isset( $_POST["id"] ) ) {
-                            $events->update_event( $_POST["id"], $_POST["title"], $_POST["content"], $_FILES["image"]["name"] );
+
+                            if ( empty( $_FILES["image"] ) ) {
+                                $image = $_POST["current_image"];
+                            }
+                            else {
+                                $image = $_FILES["image"];
+                            }
+                            
+                            $events->update_event( $_POST["id"], $_POST["title"], $_POST["content"], $image );
+                            
                         }
                         else {
-                            $events->insert_event( $_POST["title"], $_POST["content"], $_FILES["image"]["name"] );
+
+                            $image = $_FILES["image"];
+
+                            $events->insert_event( $_POST["title"], $_POST["content"], $image );
+
                         }
 
                         echo '<div class="login-message insert-message">

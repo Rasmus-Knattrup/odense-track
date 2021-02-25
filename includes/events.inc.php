@@ -30,6 +30,12 @@ class Events extends DBH {
 
     }
 
+    /**
+     * Prints all events from database
+     * 
+     * @method event_news()
+     * @return object $this->stmt->fetchAll()
+     */
     public function print_events() {
 
         $this->sql = "SELECT id, title, content, image, SUBSTRING(content, 1, 140) AS preview FROM events";
@@ -61,11 +67,26 @@ class Events extends DBH {
 
     }
 
+    /**
+     * Takes image files and uploads them to the site
+     *
+     * @method get_image( @param )
+     * @param  array $image
+     * @return object $this->stmt->fetch()
+     */
     private function get_image( $image ) {
+
+        $this->sql = 'SELECT * FROM images WHERE name = ?';
+        $this->stmt = $this->conn->prepare( $this->sql );
+        $this->stmt->execute( [ $image['name'] ] );
+
+        if ( $this->stmt->rowCount() ==! 0 ) {
+            return $this->stmt->fetch();
+        }
 
         //IMAGE HANDLER
         $this->target_dir = "img/";
-        $this->target_file = $this->target_dir . basename( $image );
+        $this->target_file = $this->target_dir . basename( $image["name"] );
               
         // Select file type
         $this->imageFileType = strtolower( pathinfo( $this->target_file, PATHINFO_EXTENSION ) );
@@ -79,44 +100,78 @@ class Events extends DBH {
             // Insert record
             $this->sql = 'INSERT INTO images ( name ) VALUES( ? )';
             $this->stmt = $this->conn->prepare( $this->sql );
-            $this->stmt->execute( [ $image ] );
+            $this->stmt->execute( [ $image["name"] ] );
                 
             // Upload file
-            $this->move_uploaded_file( $image, $this->target_file );
+            move_uploaded_file( $image["tmp_name"], $this->target_file );
         
             //Catch image id and name
             $this->sql = 'SELECT * FROM images WHERE name = ?';
             $this->stmt = $this->conn->prepare( $this->sql );
-            $this->stmt->execute( [ $image ] );
+            $this->stmt->execute( [ $image["name"] ] );
 
             return $this->stmt->fetch();
         
         }
         // Error if extension doesn't match
         else {
-            throw new Exeption('test');
+            throw new Exeption('Forkert billede type');
         }
 
     }
 
-    public function upload_event( $id, $title, $content, $image ) {
+    /**
+     * Edits an event article from database
+     * 
+     * @method update_news( @param, @param, @param, @param )
+     * @param int $id
+     * @param string $title
+     * @param string $content
+     * @param array $image
+     * @return void
+     */
+    public function update_event( $id, $title, $content, $image ) {
 
+        if ( empty( $title ) || empty( $content ) ) {
+            throw new Exception("Tomt input");
+        } 
 
+        $this->objImage = $this->get_image( $image );
+
+        $this->sql = "UPDATE events SET title = ?, content = ?, imageid = ?, image = ? WHERE id = ?";
+        $this->stmt = $this->conn->prepare( $this->sql );
+        $this->stmt->execute( [ $title, $content, $this->objImage->id, $this->objImage->name, $id ] );
 
     }
 
+    /**
+     * Inserts a new event article to the database
+     * 
+     * @method insert_event( @param, @param, @param )
+     * @param string $title
+     * @param string $content
+     * @param array $image
+     * @return void
+     */
     public function insert_event( $title, $content, $image ) {
         
-        if ( empty( $title ) || empty( $content ) empty( $image ) ) {
+        if ( empty( $title ) || empty( $content ) ) {
             throw new Exception("Tomt input");
         }
-        if () {
-            
+
+        if ( empty( $image ) ) {
+            $this->image = 'kalender.png';
+            $this->id = 1;
+        }
+        else {
+            $this->objImage = $this->get_image( $image );
+            $this->image = $this->objImage->name;
+            $this->id = $this->objImage->id;
         }
 
-        $this->sql = "INSERT INTO news (title, content) VALUES ( ?, ? )";
+        $this->sql = "INSERT INTO events (title, content, imageid, image) VALUES ( ?, ?, ?, ? )";
         $this->stmt = $this->conn->prepare( $this->sql );
-        $this->stmt->execute( [ $title, $content ] );
+        $this->stmt->execute( [ $title, $content, $this->id, $this->image ] );
 
     }
 
